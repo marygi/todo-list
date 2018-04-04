@@ -1,0 +1,17 @@
+<div *ngIf="todoList.length; else emptyTodoList">
+  <app-todo-item
+      *ngFor="let todo of todoList; let i = index"
+      [todo]="todo"
+      [index]="i"
+  ></app-todo-item>
+</div>
+<ng-template #emptyTodoList>
+    <h1>No tasks for today!</h1>
+</ng-template>
+
+
+<button
+    type="button"
+    (click)="createNewTodo()"
+></button>
+
