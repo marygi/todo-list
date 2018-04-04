@@ -31,7 +31,7 @@ export class TodoService {
         this.todosChanged.next(this.todoList.slice());
     }
 
-    updateTodoStatus(index: number, status: string ) {
+    updateTodoStatus(index: number, status: boolean ) {
         this.todoList[index].status = status;
         this.todosChanged.next(this.todoList.slice());
     }

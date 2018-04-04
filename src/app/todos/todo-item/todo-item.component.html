@@ -1,4 +1,12 @@
-<div class="">
-  <h3>{{ todo.name }}</h3>
-  <p>{{ todo.description }}</p>
+<div class="todo-item" [ngClass]="[todo.status ? 'completed' : '']">
+  <div>
+      <h3>{{ todo.name }}</h3>
+      <p>{{ todo.description }}</p>
+  </div>
+  <div>
+      <button type="button" (click)="updateTodoStatus(index)">{{todo.status ? 'Uncomoleted' : 'Completed'}}</button>
+      <br>
+      <br>
+      <button type="button" (click)="deleteTodoStatus(index)">Remove</button>
+  </div>
 </div>
