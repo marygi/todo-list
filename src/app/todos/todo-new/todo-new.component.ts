@@ -22,5 +22,6 @@ export class TodoNewComponent implements OnInit {
     const value = form.value;
     const newTodoItem = new Todo(value.name, value.description, TODO_STATUS_CONST.UNCOMPLETED);
     this.todoService.addTodo(newTodoItem);
+    form.reset();
   }
 }

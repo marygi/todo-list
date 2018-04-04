@@ -18,7 +18,7 @@ export class TodoStorageService {
 
     updateTodoList() {
         return this.http.put('https://todo-list-marygi.firebaseio.com/todos.json',
-            this.todoService.getTodoList(), httpOptions);
+            this.todoService.getTodoList(), httpOptions).subscribe();
     }
 
     getTodoList() {
