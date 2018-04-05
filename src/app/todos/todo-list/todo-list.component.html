@@ -1,4 +1,4 @@
-<div *ngIf="todoList.length; else emptyTodoList">
+<div class="todo-item-list" *ngIf="todoList.length; else emptyTodoList">
   <app-todo-item
       *ngFor="let todo of todoList; let i = index"
       [todo]="todo"

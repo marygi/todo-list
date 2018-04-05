@@ -1,12 +1,18 @@
-<div class="todo-item" [ngClass]="[todo.status ? 'completed' : '']">
-  <div>
-      <h3>{{ todo.name }}</h3>
-      <p>{{ todo.description }}</p>
-  </div>
-  <div>
-      <button type="button" (click)="updateTodoStatus(index)">{{todo.status ? 'Uncomoleted' : 'Completed'}}</button>
-      <br>
-      <br>
-      <button type="button" (click)="deleteTodoStatus(index)">Remove</button>
-  </div>
-</div>
+<mat-card class="todo-item" [ngClass]="[todo.status ? 'completed' : '']">
+    <mat-card-header>
+        <mat-card-title>
+            <h4>{{ todo.name }}</h4>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{ todo.description }}</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-raised-button type="button" (click)="updateTodoStatus(index)" color="primary">
+            {{todo.status ? 'Uncomoleted' : 'Completed'}}
+        </button>
+        <button mat-raised-button type="button" (click)="deleteTodoStatus(index)" color="warn">
+            Remove
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -1,28 +1,33 @@
-<form (ngSubmit)="onSubmit(f)" #f="ngForm">
-  <div>
-    <label for="name">Name</label>
-    <input
+<form class="todo-new-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <h2>Add New Task</h2>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Name"
         type="text"
         id="name"
         class="form-control"
         name="name"
         ngModel
         required
-    >
-  </div>
+      >
+    </mat-form-field>
 
-  <div>
-    <label for="description">Description</label>
-    <input
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Description"
         type="text"
         id="description"
         class="form-control"
         name="description"
         ngModel
         required
-    >
+      >
+    </mat-form-field>
 
-    <button type="submit" [disabled]="!f.valid">Create</button>
-  </div>
+    <div class="button-row">
+      <button mat-raised-button type="submit" [disabled]="!f.valid" color="primary">Create</button>
+    </div>
 
 </form>

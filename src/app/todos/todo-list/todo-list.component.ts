@@ -21,7 +21,7 @@ export class TodoListComponent implements OnInit, OnDestroy {
       .subscribe(
         (todos: Todo[]) => {
           this.todoList = todos;
-					this.todoStorageService.updateTodoList();
+          this.todoStorageService.updateTodoList();
         }
       );
 

@@ -3,7 +3,6 @@ import {NgForm} from '@angular/forms';
 import {Todo} from '../todo.model';
 import {TODO_STATUS_CONST} from '../todo.status';
 import {TodoService} from '../todo.service';
-import {TodoStorageService} from '../todo-storage.service';
 
 @Component({
   selector: 'app-todo-new',
@@ -13,7 +12,7 @@ import {TodoStorageService} from '../todo-storage.service';
 export class TodoNewComponent implements OnInit {
   @ViewChild('f') slForm: NgForm;
   constructor(
-    private todoService: TodoService, private todoStorageService: TodoStorageService) { }
+    private todoService: TodoService) { }
 
   ngOnInit() {
   }

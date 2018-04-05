@@ -1,8 +1,12 @@
-label {
-    display: inline-block;
-    width: 100px;
+.todo-new-form {
+    display: flex;
+    flex-direction: column;
 }
 
-input {
-    margin-bottom: 10px;
+.todo-new-form > * {
+    width: 70%;
+}
+
+.button-row {
+    margin-bottom: 20px;
 }
